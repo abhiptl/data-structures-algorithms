@@ -14,7 +14,12 @@ public class BigSorting {
             unsortedInt[unsorted_i] = new BigInteger(unsorted[unsorted_i]);
         }
 
-        bubbleSort(n, unsortedInt);
+        //bubbleSort(n, unsortedInt);
+        quickSort(unsortedInt, 0, unsortedInt.length - 1);
+
+        for(int i = 0;i < n; i++) {
+            System.out.println(unsortedInt[i]);
+        }
 
     }
 
@@ -28,9 +33,6 @@ public class BigSorting {
             }
         }
 
-        for(int i = 0;i < n; i++) {
-            System.out.println(unsortedInt[i]);
-        }
     }
 
 
@@ -39,5 +41,30 @@ public class BigSorting {
         temp = array[i];
         array[i] = array[j];
         array[j] = temp;
+    }
+
+    private static void quickSort(BigInteger[] array, int low, int high) {
+        if(low < high) {
+            int pivot = partition(array, low, high);
+
+            quickSort(array, low, pivot - 1);
+
+            quickSort(array, pivot+1, high);
+        }
+    }
+
+    private static int  partition(BigInteger[] array, int low, int high) {
+        BigInteger partition = array[high];
+
+        int i = low - 1;
+        for(int  j = low; j <= high - 1; j++) {
+            if(array[j].compareTo(partition) == -1 || array[j].compareTo(partition) == 0) {
+                i++;
+                swapNumbers(i, j, array);
+            }
+        }
+
+        swapNumbers(i+1, high, array);
+        return i+1;
     }
 }
