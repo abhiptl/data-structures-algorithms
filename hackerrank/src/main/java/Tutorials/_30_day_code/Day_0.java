@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * @link https://www.hackerrank.com/challenges/30-hello-world/problem
  */
-public class Day0 {
+public class Day_0 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String inputString = scanner.nextLine();

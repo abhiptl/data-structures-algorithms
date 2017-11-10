@@ -2,7 +2,7 @@ package Tutorials._30_day_code;
 
 import java.util.Scanner;
 
-public class Day2Operators {
+public class Day2_Operators {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         double mealCost = scan.nextDouble(); // original meal price

@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * https://www.hackerrank.com/challenges/30-data-types/problem
  */
-public class Day1DataTypes {
+public class Day1_DataTypes {
     public static void main(String[] args) {
         int i = 4;
         double d = 4.0;
