@@ -1,6 +1,7 @@
 package Algorithms.Sorting.easy;
 
 import java.math.BigInteger;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class BigSorting {
@@ -15,10 +16,13 @@ public class BigSorting {
         }
 
         //bubbleSort(n, unsortedInt);
-        quickSort(unsortedInt, 0, unsortedInt.length - 1);
+        //quickSort(unsortedInt, 0, unsortedInt.length - 1);
+
+        simpleSolution(unsorted);
 
         for(int i = 0;i < n; i++) {
-            System.out.println(unsortedInt[i]);
+            //System.out.println(unsortedInt[i]);
+            System.out.println(unsorted[i]);
         }
 
     }
@@ -54,7 +58,7 @@ public class BigSorting {
     }
 
     private static int  partition(BigInteger[] array, int low, int high) {
-        BigInteger partition = array[high];
+        BigInteger partition = array[low+(high-low)/2];
 
         int i = low - 1;
         for(int  j = low; j <= high - 1; j++) {
@@ -66,5 +70,15 @@ public class BigSorting {
 
         swapNumbers(i+1, high, array);
         return i+1;
+    }
+
+    public static void simpleSolution(String[] array) {
+        Arrays.sort(array, (left, right) -> {
+            if (left.length() != right.length()) {
+                return left.length() - right.length();
+            } else {
+                return left.compareTo(right);
+            }
+        });
     }
 }
