@@ -1,6 +1,6 @@
 package Tutorials._30_day_code;
 
-public class Day4ClassVsInstance {
+public class Day4_ClassVsInstance {
 
 }
 
