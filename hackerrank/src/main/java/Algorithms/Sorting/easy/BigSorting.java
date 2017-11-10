@@ -14,6 +14,11 @@ public class BigSorting {
             unsortedInt[unsorted_i] = new BigInteger(unsorted[unsorted_i]);
         }
 
+        bubbleSort(n, unsortedInt);
+
+    }
+
+    private static void bubbleSort(int n , BigInteger[] unsortedInt) {
         for(int i = 0; i < unsortedInt.length; i++) {
             for(int j = i+1; j < unsortedInt.length; j++) {
 
@@ -27,6 +32,7 @@ public class BigSorting {
             System.out.println(unsortedInt[i]);
         }
     }
+
 
     private static void swapNumbers(int i, int j, BigInteger[] array) {
         BigInteger temp;
