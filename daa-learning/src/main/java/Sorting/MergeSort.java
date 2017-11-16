@@ -2,6 +2,10 @@ package Sorting;
 
 import java.util.Scanner;
 
+/**
+ * Time Complexity : (n*Logn)
+ * Algorithm : Divide and Conquer
+ */
 public class MergeSort {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
