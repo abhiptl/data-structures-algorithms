@@ -1,5 +1,7 @@
 package DataStructures.LinkedList.easy;
 
+import DataStructures.LinkedList.Node;
+
 /**
  * https://www.hackerrank.com/challenges/print-the-elements-of-a-linked-list/problem
  */
@@ -14,7 +16,3 @@ public class PrintElementsOfLinkedList {
     }
 }
 
-class Node {
-    int data;
-    Node next;
-}
