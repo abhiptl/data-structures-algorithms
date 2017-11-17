@@ -1,4 +1,4 @@
-package _03_data_structures.Queue;
+package DataStructures.Queue;
 
 public class QueueApp {
     public static void main(String[] args) {

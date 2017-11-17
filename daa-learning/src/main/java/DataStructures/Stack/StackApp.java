@@ -1,4 +1,4 @@
-package _03_data_structures.Stack;
+package DataStructures.Stack;
 
 public class StackApp {
     public static void main(String[] args) {

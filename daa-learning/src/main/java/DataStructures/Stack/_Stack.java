@@ -1,4 +1,4 @@
-package _03_data_structures.Stack;
+package DataStructures.Stack;
 
 public class _Stack {
     private int top = -1;
