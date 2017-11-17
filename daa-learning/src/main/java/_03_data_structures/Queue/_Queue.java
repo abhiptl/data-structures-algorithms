@@ -1,4 +1,4 @@
-package _03_data_structures._10_1_3;
+package _03_data_structures.Queue;
 
 public class _Queue {
     private int capacity;
