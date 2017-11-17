@@ -1,0 +1,9 @@
+Why Linked List over Arrays ?
+
+1. Arrays are fixed size and can't grow dynamically.
+2. Arrays consume space once declared irrespective of its usage.
+3. Inserting new element in sorted array is expensive and same for deletion.
+
+What are drawbacks of Linked List ?
+- Random access is not allowed.
+- Extra memory space to store pointer to next element is required.
