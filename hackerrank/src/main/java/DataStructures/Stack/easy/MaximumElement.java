@@ -22,7 +22,7 @@ public class MaximumElement {
                 newElement = scanner.nextBigInteger();
                 stack.push(newElement);
 
-                if(maxStack.isEmpty() || maxStack.peek().compareTo(newElement) < 0) {
+                if(maxStack.isEmpty() || maxStack.peek().compareTo(newElement) <= 0) {
                     maxStack.push(newElement);
                 }
 
