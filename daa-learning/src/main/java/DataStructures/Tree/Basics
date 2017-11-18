@@ -1,0 +1,52 @@
+Why Trees
+
+1. You want to store information that naturally forms hierarchy like File System.
+2. Binary search tree provides faster searching (quicker than LinkedList and slower than Arrays)
+3. Trees provide moderate insertion/deletion (quicker than Arrays and slower than Unordered Linked Lists).
+4. Like Linked Lists and unlike Arrays, Trees don’t have an upper limit on number of nodes as nodes are linked using pointers.
+
+           a
+          /  \
+         b    c
+       / | \
+      b1 b2 b3
+
+Tree Use cases
+- Maintaining hierarchical data store
+- Provide moderate level insertion/deletion
+
+
+Binary Tree
+- Tree whose elements have at most 2 children left and right.
+
+Binary Tree Properties
+- Maximum number of nodes at level i = 2^(i-1)
+- Maximum number of nodes in binaray tree of height h = 2^h - 1
+- In a Binary Tree with N nodes, minimum possible height or minimum number of levels is Log2(N+1)
+- A Binary Tree with L leaves has at least   ⌈ Log2L ⌉ + 1   levels
+- Number of leaf nodes is always one more than nodes with two children
+
+Types of Binary Tree
+- Full Binary Tree means all node has either 0 or 2 children
+- Complete Binary Tree means all levels are filled completed except for last level
+- Perfect Binary tree means all internal nodes have two children and all leaves are at same level
+- Balanced Binary Tree means height of the tree is O(Log n) where n is number of nodes.Balanced Binary Search trees
+  are performance wise good as they provide O(log n) time for search, insert and delete.
+
+BFS
+- Breadth first traversals
+- Queue
+
+DFS
+- Depth first traversals
+    - Inorder(left-root-right)
+    - Preorder(root-left-right)
+    - Postorder(left-right-root)
+- Stack
+
+How to Pick One?
+- Extra Space can be one factor (Explained above)
+- Depth First Traversals are typically recursive and recursive code requires function call overheads.
+    The most important points is, BFS starts visiting nodes from root while DFS starts visiting nodes from leaves.
+    So if our problem is to search something that is more likely to closer to root, we would prefer BFS.
+    And if the target node is close to a leaf, we would prefer DFS.
