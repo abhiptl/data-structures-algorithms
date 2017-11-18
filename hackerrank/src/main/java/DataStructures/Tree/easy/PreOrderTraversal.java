@@ -4,6 +4,8 @@ import DataStructures.Tree.TreeNode;
 
 /**
  * https://www.hackerrank.com/challenges/tree-preorder-traversal/problem
+ *
+ * Time Complexity : o(n)
  */
 public class PreOrderTraversal {
     void preOrder(TreeNode root) {

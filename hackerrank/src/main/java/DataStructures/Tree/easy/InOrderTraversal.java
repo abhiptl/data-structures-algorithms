@@ -4,6 +4,8 @@ import DataStructures.Tree.TreeNode;
 
 /**
  * https://www.hackerrank.com/challenges/tree-inorder-traversal/problem
+ *
+ * Time Complexity : o(n)
  */
 public class InOrderTraversal {
     void inOrder(TreeNode root) {

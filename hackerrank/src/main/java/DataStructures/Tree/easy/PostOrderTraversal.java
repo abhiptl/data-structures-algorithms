@@ -4,6 +4,8 @@ import DataStructures.Tree.TreeNode;
 
 /**
  * https://www.hackerrank.com/challenges/tree-postorder-traversal/problem
+ *
+ * Time Complexity : o(n)
  */
 public class PostOrderTraversal {
     void postOrder(TreeNode root) {
