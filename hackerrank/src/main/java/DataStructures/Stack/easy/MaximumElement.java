@@ -13,7 +13,7 @@ public class MaximumElement {
         int type;
         BigInteger newElement;
         Stack<BigInteger> stack = new Stack<>();
-        List<BigInteger> list = new ArrayList<>();
+        Stack<BigInteger> maxStack = new Stack<>();
 
         for(int i = 1; i<=n; i++) {
             type = scanner.nextInt();
@@ -22,20 +22,24 @@ public class MaximumElement {
                 newElement = scanner.nextBigInteger();
                 stack.push(newElement);
 
+                if(maxStack.isEmpty() || maxStack.peek().compareTo(newElement) < 0) {
+                    maxStack.push(newElement);
+                }
+
             }
 
             if(type == 2) {
                 BigInteger pop = stack.pop();
+                if(pop.compareTo(maxStack.peek()) == 0) {
+                    maxStack.pop();
+                }
             }
 
             if(type == 3) {
-                Optional<BigInteger> max = stack.stream().max(BigInteger::compareTo);
-                list.add(max.get());
+                System.out.println(maxStack.peek());
             }
         }
 
-        for(BigInteger b : list) {
-            System.out.println(b);
-        }
+
     }
 }
