@@ -1,0 +1,5 @@
+- First In First Out
+- EnQueue, Dequeue, Front, Rear
+- Applications
+    - CPU scheduling
+    - when data is transferred asynchronously

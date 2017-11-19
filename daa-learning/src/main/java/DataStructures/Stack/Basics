@@ -1,0 +1,5 @@
+- Time Complexity of push,pop,peek,isEmpty is O(n)
+- Practical applications
+    - Redo-Undo feature implementation
+    - Web Browser Forward and Backward implementation
+    -
