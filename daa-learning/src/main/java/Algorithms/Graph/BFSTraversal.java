@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.ListIterator;
 import java.util.Queue;
 
-public class GraphBFSTraversal {
+public class BFSTraversal {
     static Graph g;
     public static void main(String arg[]) {
         g = new Graph(4);
