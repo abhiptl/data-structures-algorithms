@@ -1,4 +1,6 @@
-package Algorithms.Graph;
+package Algorithms.Graph.topologicalsorting;
+
+import Algorithms.Graph.Graph;
 
 import java.util.ListIterator;
 import java.util.Stack;
