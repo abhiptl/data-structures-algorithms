@@ -28,7 +28,7 @@ public class Graph {
      *
      * Time Complexity worst case: O(n)
      */
-    private int find(int[] parents, int i) {
+    public int find(int[] parents, int i) {
         if(parents[i] == -1) {
             return i;
         }
@@ -40,7 +40,7 @@ public class Graph {
      *
      * Time Complexity worst case: O(n)
      */
-    private void union(int[] parents, int x, int y) {
+    public void union(int[] parents, int x, int y) {
         int xSet = find(parents,x);
         int ySet = find(parents, y);
         parents[xSet] = ySet;
