@@ -8,9 +8,17 @@ import java.util.Set;
 /**
  * https://www.geeksforgeeks.org/greedy-algorithms-set-5-prims-minimum-spanning-tree-mst-2/
  *
+ * A minimum spanning tree (MST) or minimum weight spanning tree for a weighted,
+ * connected and undirected graph is a spanning tree with weight less than or equal to the weight of every other spanning tree.
+ *
  * Time Complexity : O(v^2)
  *
- * If we store Graph as Adjacency List then using MinHeap can be reduced to O(E logV)
+ * If we store Graph as Adjacency List then using MinHeap can be reduced to O(E logV).
+ *
+ * Applications
+ *  1. Network Design
+ *      Ex. Telephone line connecting all office of your business in different cities.
+ *
  *
  */
 public class PrimAlgorithm {
