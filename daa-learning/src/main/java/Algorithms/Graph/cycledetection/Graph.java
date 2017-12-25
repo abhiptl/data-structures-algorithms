@@ -4,8 +4,8 @@ package Algorithms.Graph.cycledetection;
  *
  */
 public class Graph {
-    int V;
-    int E;
+    public int V;
+    public int E;
     public Edge[] edges;
 
     public Graph(int V, int E) {
@@ -16,6 +16,12 @@ public class Graph {
         for(int i = 0; i < E; i++) {
             edges[i] = new Edge();
         }
+    }
+
+    public Graph(int v, int e, Edge[] edges) {
+        V = v;
+        E = e;
+        this.edges = edges;
     }
 
     /**
@@ -63,10 +69,10 @@ public class Graph {
         return 0;
     }
 
-    class Edge {
-        int src;
-        int dest;
-        int weight;
+    public class Edge {
+        public int src;
+        public int dest;
+        public int weight;
 
         public Edge() {
 
