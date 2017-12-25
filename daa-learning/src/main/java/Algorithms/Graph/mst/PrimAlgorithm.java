@@ -56,7 +56,7 @@ public class PrimAlgorithm {
         System.out.println("Edge   Weight");
         for (int i = 1; i < V; i++)
             System.out.println(parentVertexSet[i]+" - "+ i+"    "+
-                    graph[parentVertexSet[i]][i]);
+                    graph[i][parentVertexSet[i]]);
 
 
 
