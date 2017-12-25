@@ -11,13 +11,16 @@ public class DijkstraAlgorithm {
     public void findShortestPath(int[][] graph, int src) {
         Boolean[] visited = new Boolean[graph.length];
         Integer[] shortestDistance = new Integer[graph.length];
+        int[] parents = new int[graph.length];
 
         for(int i = 0; i< shortestDistance.length; i++) {
             shortestDistance[i] = Integer.MAX_VALUE;
             visited[i] = false;
+            parents[i] = -1;
         }
 
         shortestDistance[src] = 0;
+        parents[src] = -1;
 
         // When loop reaches last vertex, shortestDistance array filled with shorted distance
         for(int count = 0; count < graph.length - 1; count++) {
@@ -28,14 +31,19 @@ public class DijkstraAlgorithm {
                 if(visited[v] == false && graph[u][v] != 0) {
                     if((shortestDistance[u] + graph[u][v] < shortestDistance[v])) {
                         shortestDistance[v] = shortestDistance[u] + graph[u][v];
+                        parents[v] = u;
                     }
                 }
             }
         }
 
-        System.out.println("Vertex  Distance(from Source)");
-        for (int i = 0; i < graph.length; i++)
-            System.out.println(i+"       "+shortestDistance[i]);
+        System.out.println("Vertex \t Distance(from Source) \t Path");
+        for (int i = 0; i < graph.length; i++) {
+            System.out.print(i+"\t\t\t"+shortestDistance[i] +"\t\t\t\t\t\t");
+            printPath(parents, i);
+            System.out.println();
+        }
+
 
     }
 
@@ -49,6 +57,14 @@ public class DijkstraAlgorithm {
             }
         }
         return minVertexIndex;
+    }
+
+    private void printPath(int parent[], int j) {
+        if (parent[j]==-1)
+            return;
+
+        printPath(parent, parent[j]);
+        System.out.print(j + "->");
     }
 
     public static void main(String[] args) {
