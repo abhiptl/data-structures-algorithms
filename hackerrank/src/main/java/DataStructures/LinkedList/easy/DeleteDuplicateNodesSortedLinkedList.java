@@ -1,6 +1,6 @@
 package DataStructures.LinkedList.easy;
 
-import DataStructures.LinkedList.Node;
+import DataStructures.LinkedList.SinglyLinkedListNode;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -9,14 +9,14 @@ import java.util.Set;
  * https://www.hackerrank.com/challenges/delete-duplicate-value-nodes-from-a-sorted-linked-list/problem
  */
 public class DeleteDuplicateNodesSortedLinkedList {
-    Node RemoveDuplicates(Node head) {
+    SinglyLinkedListNode RemoveDuplicates(SinglyLinkedListNode head) {
 
         Set<Integer> hashSet = new HashSet<>();
 
         if(head != null) {
             int elementData;
-            Node prevNode = null;
-            Node currentNode = head;
+            SinglyLinkedListNode prevNode = null;
+            SinglyLinkedListNode currentNode = head;
             while (currentNode != null) {
                 elementData = currentNode.data;
 

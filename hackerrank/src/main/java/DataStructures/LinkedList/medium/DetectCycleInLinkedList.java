@@ -1,10 +1,10 @@
 package DataStructures.LinkedList.medium;
 
-import DataStructures.LinkedList.Node;
+import DataStructures.LinkedList.SinglyLinkedListNode;
 
 public class DetectCycleInLinkedList {
-    boolean hasCycle(Node head) {
-        Node fast = head;
+    boolean hasCycle(SinglyLinkedListNode head) {
+        SinglyLinkedListNode fast = head;
 
         while(fast != null && fast.next != null) {
             fast = fast.next.next;

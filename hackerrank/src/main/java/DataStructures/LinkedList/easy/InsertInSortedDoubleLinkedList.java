@@ -1,26 +1,26 @@
 package DataStructures.LinkedList.easy;
 
-import DataStructures.LinkedList.Node;
+import DataStructures.LinkedList.SinglyLinkedListNode;
 
 /**
  * https://www.hackerrank.com/challenges/insert-a-node-into-a-sorted-doubly-linked-list/problem
  */
 public class InsertInSortedDoubleLinkedList {
-    Node SortedInsert(Node head, int data) {
+    SinglyLinkedListNode SortedInsert(SinglyLinkedListNode head, int data) {
 
         if(head == null) {
-            Node newNode = new Node();
+            SinglyLinkedListNode newNode = new SinglyLinkedListNode();
             newNode.data = data;
             newNode.next = null;
             newNode.prev = null;
         } else {
-            Node currentNode = head;
+            SinglyLinkedListNode currentNode = head;
 
             while (currentNode.next != null && currentNode.next.data <= data) {
                 currentNode = currentNode.next;
             }
 
-            Node newNode = new Node();
+            SinglyLinkedListNode newNode = new SinglyLinkedListNode();
             newNode.data = data;
 
             if(currentNode.next == null) {
