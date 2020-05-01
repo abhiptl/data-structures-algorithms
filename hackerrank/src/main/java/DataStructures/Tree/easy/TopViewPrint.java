@@ -84,7 +84,7 @@ public class TopViewPrint {
                 }
 
             } else {
-                map.put(width+1, new Tuple(node.right.data, level+1, width+1));
+                map.put(width + 1, new Tuple(node.right.data, level + 1, width + 1));
             }
 
             iterate(node.right, map, width+1, level+1);
