@@ -1,5 +1,7 @@
 package DataStructures.Tree.easy;
 
+import DataStructures.Tree.Node;
+
 import java.util.*;
 
 /**

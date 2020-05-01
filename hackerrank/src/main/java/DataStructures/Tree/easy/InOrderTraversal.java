@@ -1,6 +1,6 @@
 package DataStructures.Tree.easy;
 
-import DataStructures.Tree.TreeNode;
+import DataStructures.Tree.Node;
 
 /**
  * https://www.hackerrank.com/challenges/tree-inorder-traversal/problem
@@ -8,7 +8,7 @@ import DataStructures.Tree.TreeNode;
  * Time Complexity : o(n)
  */
 public class InOrderTraversal {
-    void inOrder(TreeNode root) {
+    void inOrder(Node root) {
         if(root == null) {
             return;
         }

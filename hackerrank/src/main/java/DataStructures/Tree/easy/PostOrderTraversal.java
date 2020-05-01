@@ -1,6 +1,6 @@
 package DataStructures.Tree.easy;
 
-import DataStructures.Tree.TreeNode;
+import DataStructures.Tree.Node;
 
 /**
  * https://www.hackerrank.com/challenges/tree-postorder-traversal/problem
@@ -8,7 +8,7 @@ import DataStructures.Tree.TreeNode;
  * Time Complexity : o(n)
  */
 public class PostOrderTraversal {
-    void postOrder(TreeNode root) {
+    void postOrder(Node root) {
         if(root == null) {
             return;
         }

@@ -1,5 +1,7 @@
 package DataStructures.Tree.easy;
 
+import DataStructures.Tree.Node;
+
 /**
  * https://www.hackerrank.com/challenges/tree-height-of-a-binary-tree/problem
  */
@@ -15,15 +17,3 @@ public class HeightOfTree {
     }
 }
 
-class Node{
-        int data;
-        Node left;
-        Node right;
-
-        public Node(int data) {
-            this.data = data;
-        }
-        public Node() {
-
-        }
-}

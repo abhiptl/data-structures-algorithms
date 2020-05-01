@@ -1,6 +1,6 @@
 package DataStructures.Tree.easy;
 
-import DataStructures.Tree.TreeNode;
+import DataStructures.Tree.Node;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -9,9 +9,9 @@ import java.util.Queue;
  * https://www.hackerrank.com/challenges/tree-level-order-traversal/problem
  */
 public class LevelOrderTraversal {
-    void levelOrder(TreeNode root) {
-        TreeNode n=new TreeNode();
-        Queue<TreeNode> q = new LinkedList<TreeNode>();
+    void levelOrder(Node root) {
+        Node n=new Node();
+        Queue<Node> q = new LinkedList<Node>();
         q.add(root);
 
         while(!q.isEmpty())
@@ -39,7 +39,7 @@ public class LevelOrderTraversal {
     /* Compute the "height" of a tree -- the number of
     nodes along the longest path from the root node
     down to the farthest leaf node.*/
-    int height(Node root)
+    int height(DataStructures.Tree.Node root)
     {
         if (root == null)
             return 0;
@@ -57,7 +57,7 @@ public class LevelOrderTraversal {
     }
 
     /* Print nodes at a given level */
-    void printGivenLevel(Node root, int level)
+    void printGivenLevel(DataStructures.Tree.Node root, int level)
     {
         if (root == null)
             return;

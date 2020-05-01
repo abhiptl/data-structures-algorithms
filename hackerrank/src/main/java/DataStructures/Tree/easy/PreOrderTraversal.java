@@ -1,6 +1,6 @@
 package DataStructures.Tree.easy;
 
-import DataStructures.Tree.TreeNode;
+import DataStructures.Tree.Node;
 
 /**
  * https://www.hackerrank.com/challenges/tree-preorder-traversal/problem
@@ -8,7 +8,7 @@ import DataStructures.Tree.TreeNode;
  * Time Complexity : o(n)
  */
 public class PreOrderTraversal {
-    void preOrder(TreeNode root) {
+    void preOrder(Node root) {
         if(root == null) {
             return;
         }
