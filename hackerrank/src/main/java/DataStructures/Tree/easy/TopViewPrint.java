@@ -7,7 +7,7 @@ import java.util.*;
  */
 public class TopViewPrint {
 
-    static class Tuple {
+    public static class Tuple {
         int data;
         int level;
         int width;
