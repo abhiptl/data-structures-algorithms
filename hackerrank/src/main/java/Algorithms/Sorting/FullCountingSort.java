@@ -10,10 +10,11 @@ import java.util.Scanner;
 public class FullCountingSort {
     static void countSort(List<List<String>> arr) {
         int inputSize = arr.size();
+        int half = arr.size()/2;
+        List<StringBuilder> result = new ArrayList<>(100);
 
-        List<List<String>> result = new ArrayList<>(100);
         for(int i = 1; i<=100; i++) {
-            result.add(new ArrayList<String>());
+            result.add(new StringBuilder());
         }
 
         for(int i = 0; i < inputSize; i++) {
@@ -23,18 +24,16 @@ public class FullCountingSort {
             String data = inputRow.get(1);
 
 
-            if((i+1) > inputSize/2)  {
-                result.get(index).add(data);
+            if((i+1) > half)  {
+                result.get(index).append(data + " ");
             } else {
-                result.get(index).add("-");
+                result.get(index).append("- ");
             }
         }
 
-        for(List<String> output : result) {
-            if(!output.isEmpty()) {
-                for(String s : output) {
-                    System.out.print(s+" ");
-                }
+        for(StringBuilder output : result) {
+            if(!output.toString().isEmpty()) {
+                System.out.print(output);
             }
         }
     }
